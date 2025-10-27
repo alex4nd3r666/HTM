@@ -30,6 +30,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import ru.argentum.htm.content.items.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(HardTechnologyMod.MODID)
@@ -81,6 +82,8 @@ public class HardTechnologyMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        //Items register HTM
+        ModItems.Register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -105,6 +108,9 @@ public class HardTechnologyMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(EXAMPLE_BLOCK_ITEM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.KEYGEN);
         }
     }
 
