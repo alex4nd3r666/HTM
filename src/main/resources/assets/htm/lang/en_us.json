@@ -1,0 +1,13 @@
+{
+  "itemGroup.htm": "Example Mod Tab",
+  "block.htm.example_block": "Example Block",
+  "item.htm.example_item": "Example Item",
+
+  "htm.configuration.title": "Hard Technology Mod Configs",
+  "htm.configuration.section.htm.common.toml": "Hard Technology Mod Configs",
+  "htm.configuration.section.htm.common.toml.title": "Hard Technology Mod Configs",
+  "htm.configuration.items": "Item List",
+  "htm.configuration.logDirtBlock": "Log Dirt Block",
+  "htm.configuration.magicNumberIntroduction": "Magic Number Text",
+  "htm.configuration.magicNumber": "Magic Number"
+}
