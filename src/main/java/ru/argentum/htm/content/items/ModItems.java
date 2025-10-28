@@ -8,9 +8,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS
             = DeferredRegister.createItems(HardTechnologyMod.MODID);
+    //public static final DeferredItem<Item> BISMUTH = ITEMS.registerItem("bismuth", Item::new, new Item.Properties());
 
-    public static final DeferredItem<Item> KEYGEN = ITEMS.register("keygen",
-            ()-> new Item(new Item.Properties()));
+    //public static final DeferredItem<Item> KEYGEN = ITEMS.register("keygen",
+    //        ()-> new Item(new Item.Properties()));
 
     public static void Register(IEventBus eventBus){
         ITEMS.register(eventBus);
