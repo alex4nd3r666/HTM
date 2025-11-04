@@ -28,7 +28,7 @@ public class HardTechnologyMod {
 
         // Регистрация обработчиков событий
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::addCreative);
+        //modEventBus.addListener(this::addCreative);
         NeoForge.EVENT_BUS.register(this);
 
         // Регистрация предметов из другого модуля
@@ -49,11 +49,7 @@ public class HardTechnologyMod {
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(Registry.EXAMPLE_BLOCK_ITEM);
-        }
-    }
+
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
